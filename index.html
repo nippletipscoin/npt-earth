@@ -6,82 +6,83 @@
   <title>NippleTips ($NPT)</title>
   <style>
     body {
-      margin: 0;
-      font-family: 'Courier New', Courier, monospace;
-      background: linear-gradient(135deg, #ff69b4, #ff8c00);
+      background-color: #1c1c1c;
+      font-family: 'Courier New', monospace;
       color: #fff;
+      margin: 0;
+      padding: 0;
       text-align: center;
-      padding: 2rem;
     }
     header {
-      font-size: 2.5rem;
-      font-weight: bold;
-      margin-bottom: 1rem;
+      padding: 30px 10px;
     }
-    .tagline {
-      font-size: 1.2rem;
-      margin-bottom: 2rem;
+    h1 {
+      font-size: 2.5em;
+      color: #ff69b4;
     }
-    .pixel-boob {
-      font-size: 4rem;
-      margin: 1rem 0;
+    .pixel-boobs {
+      font-size: 100px;
+      line-height: 0.6em;
     }
-    section {
-      max-width: 700px;
-      margin: 2rem auto;
-      background-color: rgba(0, 0, 0, 0.2);
-      padding: 2rem;
-      border-radius: 10px;
+    p {
+      font-size: 1.1em;
+      margin: 20px auto;
+      max-width: 600px;
     }
-    a.button {
-      display: inline-block;
-      margin-top: 1rem;
-      padding: 0.75rem 1.5rem;
-      background-color: #000;
-      color: #fff;
-      border-radius: 5px;
+    .buttons a, .buttons button {
+      margin: 10px;
+      padding: 12px 20px;
+      background: #ff69b4;
+      color: #000;
+      border: none;
+      border-radius: 8px;
       text-decoration: none;
       font-weight: bold;
+      cursor: pointer;
     }
     footer {
-      margin-top: 4rem;
-      font-size: 0.9rem;
+      margin-top: 40px;
+      font-size: 0.9em;
     }
   </style>
+  <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
+  <script>
+    async function connectWallet() {
+      if (window.ethereum) {
+        try {
+          await window.ethereum.request({ method: 'eth_requestAccounts' });
+          const web3 = new Web3(window.ethereum);
+          const accounts = await web3.eth.getAccounts();
+          alert('Connected wallet: ' + accounts[0]);
+        } catch (error) {
+          alert('Wallet connection failed.');
+        }
+      } else {
+        alert('Please install MetaMask or a Web3 wallet.');
+      }
+    }
+  </script>
 </head>
 <body>
   <header>
-    $NPT - NippleTips
+    <div class="pixel-boobs">(.)(.)</div>
+    <h1>NippleTips ($NPT)</h1>
+    <p>
+      A bold, fun, and meaningful meme coin project promoting breast health & awareness
+      through the power of crypto and community. Inspired by 80s vibes and pixelated fun.
+    </p>
+    <div class="buttons">
+      <button onclick="connectWallet()">Connect Wallet</button>
+      <a href="#" target="_blank">Buy NPT on QuickSwap</a>
+    </div>
+    <div class="buttons">
+      <a href="https://twitter.com/NippleTipsCoin" target="_blank">Twitter</a>
+      <a href="https://t.me/NippleTips" target="_blank">Telegram</a>
+    </div>
   </header>
-  <div class="tagline">
-    A meme coin with purpose. Fun. Viral. Supportive.
-  </div>
-  <div class="pixel-boob">(● ‿ ●)</div>
-
-  <section>
-    <h2>Tokenomics</h2>
-    <p>Supply: 8,008,580,085</p>
-    <p>70% Locked Liquidity (10% to start)</p>
-    <p>10% Marketing | 10% Team | 10% Breast Health & Cancer Awareness</p>
-    <p>0.80085% Tax (Buy/Sell) — goes to the Cause Fund</p>
-  </section>
-
-  <section>
-    <h2>How to Buy</h2>
-    <p>$NPT will be available on select DEXs like Quickswap. Add the contract to your wallet and start trading!</p>
-    <p><strong>Token Address:</strong><br/> <code>0xYOUR_TOKEN_ADDRESS</code></p>
-    <a href="#" class="button">Add $NPT to MetaMask</a>
-  </section>
-
-  <section>
-    <h2>Get Involved</h2>
-    <p>Join the movement. Share the meme. Help the cause.</p>
-    <a href="https://t.me/NIPPLETIPS" class="button">Join Telegram</a>
-    <a href="https://x.com/NIPPLETIPS" class="button">Follow on X</a>
-  </section>
-
   <footer>
-    © 2025 NippleTips ($NPT). Powered by community and cause.
+    <p>Contact: <a href="mailto:nippletipscoin@gmail.com">nippletipscoin@gmail.com</a></p>
+    <p>&copy; 2025 NippleTips Coin. All rights reserved.</p>
   </footer>
 </body>
 </html>
