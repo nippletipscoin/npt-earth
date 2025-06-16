@@ -27,7 +27,7 @@
     header {
       display: flex;
       justify-content: space-between;
-      align-items: flex-start;
+      align-items: center;
       padding: 20px;
     }
 
@@ -35,13 +35,6 @@
       font-size: 28px;
       text-decoration: none;
       color: white;
-      margin-top: 10px;
-    }
-
-    .top-right {
-      display: flex;
-      flex-direction: column;
-      align-items: flex-end;
     }
 
     .top-right button {
@@ -54,29 +47,35 @@
       font-weight: bold;
     }
 
+    main {
+      flex-grow: 1;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: flex-start;
+      padding: 20px;
+      text-align: center;
+    }
+
     .pixel-boobs {
       font-size: 100px;
-      text-align: center;
-      margin: 20px auto 0;
       line-height: 1;
+      margin-bottom: 10px;
     }
 
     h1 {
       font-size: 2.5em;
-      text-align: center;
-      margin: 10px 0;
+      margin: 0 0 15px;
     }
 
     p {
       font-size: 1.1em;
-      text-align: center;
       max-width: 700px;
-      margin: 10px auto 30px;
+      margin: 0 0 30px;
     }
 
     .buttons, .socials {
-      text-align: center;
-      margin-bottom: 20px;
+      margin: 10px 0;
     }
 
     .buttons a, .buttons button,
@@ -94,7 +93,7 @@
 
     footer {
       text-align: center;
-      padding: 20px 0;
+      padding: 15px 0;
       font-size: 0.9em;
     }
   </style>
