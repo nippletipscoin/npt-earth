@@ -17,28 +17,29 @@
 
     header {
       text-align: center;
-      padding-top: 40px;
+      padding-top: 80px;
     }
 
     .pixel-boobs {
       font-size: 80px;
       line-height: 0.6em;
+      margin-bottom: 10px;
     }
 
     h1 {
       font-size: 2.5em;
       color: #fff;
-      margin: 0;
+      margin-top: 10px;
     }
 
     .email-icon {
       position: absolute;
       top: 15px;
       left: 20px;
-      font-size: 32px;
+      width: 32px;
+      height: 32px;
+      fill: white;
       cursor: pointer;
-      text-decoration: none;
-      color: #fff;
     }
 
     .wallet-button {
@@ -108,7 +109,13 @@
   </script>
 </head>
 <body>
-  <a href="mailto:nippletipscoin@gmail.com" class="email-icon">📧</a>
+  <a href="mailto:nippletipscoin@gmail.com" class="email-icon" aria-label="Email">
+    <svg viewBox="0 0 24 24" class="email-icon">
+      <path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 
+               0-2-.9-2-2V6c0-1.1.9-2 2-2zm0 
+               4v10h16V8l-8 5-8-5zm8 3 8-5H4l8 5z"/>
+    </svg>
+  </a>
   <button class="wallet-button" onclick="connectWallet()">Connect Wallet</button>
 
   <header>
