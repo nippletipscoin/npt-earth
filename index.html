@@ -5,99 +5,90 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>NippleTips ($NPT)</title>
   <style>
-    * {
-      box-sizing: border-box;
-    }
-
     html, body {
-      margin: 0;
-      padding: 0;
       height: 100%;
+      margin: 0;
       font-family: 'Courier New', monospace;
-      background: linear-gradient(to bottom right, #ffcba4, #ff69b4, #c94fcf);
-      color: white;
-    }
-
-    body {
       display: flex;
       flex-direction: column;
-      justify-content: space-between;
+      background: linear-gradient(160deg, #ffd1dc, #ff9ecb, #c88ef2);
+      color: #fff;
     }
 
     header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      padding: 20px;
-    }
-
-    .email-icon {
-      font-size: 28px;
-      text-decoration: none;
-      color: white;
-    }
-
-    .top-right button {
-      padding: 10px 16px;
-      background: #fff;
-      color: #ff69b4;
-      border: none;
-      border-radius: 8px;
-      cursor: pointer;
-      font-weight: bold;
-    }
-
-    main {
-      flex-grow: 1;
-      display: flex;
-      flex-direction: column;
-      align-items: center;
-      justify-content: flex-start;
-      padding: 20px;
       text-align: center;
+      padding-top: 40px;
     }
 
     .pixel-boobs {
-      font-size: 100px;
-      line-height: 1;
-      margin-bottom: 10px;
+      font-size: 80px;
+      line-height: 0.6em;
     }
 
     h1 {
       font-size: 2.5em;
-      margin: 0 0 15px;
+      color: #fff;
+      margin: 0;
     }
 
-    p {
-      font-size: 1.1em;
+    .email-icon {
+      position: absolute;
+      top: 15px;
+      left: 20px;
+      font-size: 32px;
+      cursor: pointer;
+      text-decoration: none;
+      color: #fff;
+    }
+
+    .wallet-button {
+      position: absolute;
+      top: 15px;
+      right: 20px;
+      padding: 10px 18px;
+      background: #fff;
+      color: #000;
+      border: none;
+      border-radius: 8px;
+      font-weight: bold;
+      cursor: pointer;
+    }
+
+    p.description {
       max-width: 700px;
-      margin: 0 0 30px;
+      margin: 30px auto;
+      font-size: 1.1em;
+      text-align: center;
+      padding: 0 20px;
     }
 
     .buttons, .socials {
-      margin: 10px 0;
+      display: flex;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 16px;
+      margin: 20px 0;
     }
 
     .buttons a, .buttons button,
     .socials a {
-      margin: 10px;
       padding: 12px 20px;
       background: #fff;
-      color: #ff69b4;
+      color: #000;
       border: none;
       border-radius: 8px;
-      text-decoration: none;
       font-weight: bold;
+      text-decoration: none;
       cursor: pointer;
     }
 
     footer {
       text-align: center;
-      padding: 15px 0;
       font-size: 0.9em;
+      padding: 20px;
+      margin-top: auto;
     }
   </style>
-
   <script src="https://cdn.jsdelivr.net/npm/web3@latest/dist/web3.min.js"></script>
   <script>
     async function connectWallet() {
@@ -117,30 +108,27 @@
   </script>
 </head>
 <body>
-  <header>
-    <a class="email-icon" href="mailto:nippletipscoin@gmail.com">&#9993;</a>
-    <div class="top-right">
-      <button onclick="connectWallet()">Connect Wallet</button>
-    </div>
-  </header>
+  <a href="mailto:nippletipscoin@gmail.com" class="email-icon">📧</a>
+  <button class="wallet-button" onclick="connectWallet()">Connect Wallet</button>
 
-  <main>
+  <header>
     <div class="pixel-boobs">(.)(.)</div>
     <h1>NippleTips ($NPT)</h1>
-    <p>
-      A bold, fun, and meaningful meme coin project promoting breast health & awareness
-      through the power of crypto and community. Inspired by 80s vibes and pixelated fun.
-    </p>
+  </header>
 
-    <div class="buttons">
-      <a href="#" target="_blank">Buy NPT on QuickSwap</a>
-    </div>
+  <p class="description">
+    A bold, fun, and meaningful meme coin project promoting breast health & awareness
+    through the power of crypto and community.
+  </p>
 
-    <div class="socials">
-      <a href="https://twitter.com/NippleTipsCoin" target="_blank">Twitter</a>
-      <a href="https://t.me/NippleTips" target="_blank">Telegram</a>
-    </div>
-  </main>
+  <div class="buttons">
+    <a href="#">Buy NPT on QuickSwap</a>
+  </div>
+
+  <div class="socials">
+    <a href="https://twitter.com/NippleTipsCoin" target="_blank">Twitter</a>
+    <a href="https://t.me/NippleTips" target="_blank">Telegram</a>
+  </div>
 
   <footer>
     <p>&copy; 2025 NippleTips Coin. All rights reserved.</p>
